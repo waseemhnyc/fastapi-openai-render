@@ -1,7 +1,7 @@
 services:
   # A Docker web service
   - type: web
-    name: fastapi-example
+    name: fastapi-openai-example
     runtime: python
     plan: free
     autoDeploy: false
