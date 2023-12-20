@@ -1,8 +1,12 @@
-# Deploy FastAPI on Render
+# Deploy FastAPI with Open AI on Render
 
-Use this repo as a template to deploy a Python [FastAPI](https://fastapi.tiangolo.com) service on Render.
+Use this repo as a template to deploy a Python [FastAPI](https://fastapi.tiangolo.com) service on Render that includes OpenAI endpoints.
 
-See https://render.com/docs/deploy-fastapi or follow the steps below:
+## Notes:
+
+- Update `name` in `render.yaml` to the name of your service
+- Includes Pytest - Modify tests in test_main.py and run tests with the command `pytest`
+- Includes two endpoints: `/prompt` and `/prompt/stream`
 
 ## Manual Steps
 
@@ -20,8 +24,4 @@ See https://render.com/docs/deploy-fastapi or follow the steps below:
 
 Or simply click:
 
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/render-examples/fastapi)
-
-## Thanks
-
-Thanks to [Harish](https://harishgarg.com) for the [inspiration to create a FastAPI quickstart for Render](https://twitter.com/harishkgarg/status/1435084018677010434) and for some sample code!
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/waseemhnyc/fastapi-openai-render.git)

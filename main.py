@@ -1,5 +1,3 @@
-from typing import Optional
-
 from fastapi import FastAPI
 from fastapi.responses import StreamingResponse
 from fastapi.middleware.cors import CORSMiddleware
@@ -45,7 +43,7 @@ async def root():
     return {"message": "Hello World"}
 
 
-@app.post("/prompt/")
+@app.post("/prompt")
 async def prompt_response(prompt: Prompt):
     openai_response = client.chat.completions.create(
         model="gpt-4-1106-preview",
