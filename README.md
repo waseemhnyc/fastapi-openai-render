@@ -67,11 +67,15 @@ uvicorn main:app --host 0.0.0.0
 
 **Question:** How can I customize the `Click to Deploy` button to point to my forked repository?
 
-**Answer:** By updating the URL to your forked repository in this README file.
+```
+By updating the URL to your forked repository in this README file.
+```
 
 **Question:** How can I change the name of my web service?
 
-**Answer:** You can change the name of your web service by modifying the `name` key in the `render.yaml` file.
+```
+You can change the name of your web service by modifying the `name` key in the `render.yaml` file.
+```
 
 ```bash
   - type: web
