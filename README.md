@@ -45,6 +45,12 @@ Run local server
 uvicorn main:app --host 0.0.0.0
 ```
 
+## Run Test
+
+```bash
+pytest
+```
+
 ## Manual Steps To Deploy
 
 1. You may use this repository directly or [create your own repository from this template](https://github.com/waseemhnyc/fastapi-openai-render/generate) if you'd like to customize the code.
