@@ -1,13 +1,23 @@
-# Deploy FastAPI with Open AI on Render
+# FastAPI with Open AI deployed on Render
 
 Use this repo as a template to deploy a Python [FastAPI](https://fastapi.tiangolo.com) service on Render that includes OpenAI endpoints.
 
-## Notes:
+## Why use this template
 
-- Update `name` in `render.yaml` to the name of your service
-- Includes Pytest - Modify tests in test_main.py and run tests with the command `pytest`
 - Includes two endpoints: `/prompt` and `/prompt/stream`
-- Extra: Update links in README.md to use your own repo as a template or for "Deploy to Render"
+- `/prompt/stream` streams back responses from OpenAI to FastAPI to your client
+- Deploy with one click
+- Includes Pytest - Modify tests in test_main.py and run tests with the command `pytest`
+
+## Run Project Locally
+
+1. Clone or Fork repository
+2. Create your `.env` file with `cp .env.example .env` and update your `OPENAI_API_KEY`
+3. Create virtualenv 
+4. Source virtualenv
+5. Install requirements
+6. Run local server `uvicorn main:app --host 0.0.0.0`
+
 
 ## Manual Steps
 
