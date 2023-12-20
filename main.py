@@ -47,7 +47,6 @@ async def root():
 async def prompt_response(prompt: Prompt):
     openai_response = client.chat.completions.create(
         model="gpt-4-1106-preview",
-        stream=True,
         messages=[
             {
                 "role": "system", 
@@ -61,7 +60,7 @@ async def prompt_response(prompt: Prompt):
             }
         ],
     )
-    return {"response": openai_response.choices[0].text.strip()}
+    return {"response": openai_response.choices[0].message.content}
 
 
 @app.post("/prompt/stream")

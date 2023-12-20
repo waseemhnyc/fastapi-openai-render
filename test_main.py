@@ -1,25 +1,17 @@
 from fastapi.testclient import TestClient
 
-from .main import app
+from main import app
 
 client = TestClient(app)
 
 
 def test_prompt():
-    response = client.get("/prompt/", headers={"X-Token": "coneofsilence"})
+    response = client.post("/prompt/", json={"message": "Hello AI!"})
     assert response.status_code == 200
-    assert response.json() == {
-        "id": "foo",
-        "title": "Foo",
-        "description": "There goes my hero",
-    }
+    assert "response" in response.json()
 
 
 def test_prompt_stream():
-    response = client.get("/prompt/stream/", headers={"X-Token": "coneofsilence"})
+    response = client.post("/prompt/stream/", json={"message": "Hello AI!"})
     assert response.status_code == 200
-    assert response.json() == {
-        "id": "foo",
-        "title": "Foo",
-        "description": "There goes my hero",
-    }
+    assert response.headers["content-type"] == "text/event-stream; charset=utf-8"
