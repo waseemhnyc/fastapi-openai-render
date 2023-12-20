@@ -4,20 +4,42 @@ Use this repo as a template to deploy a Python [FastAPI](https://fastapi.tiangol
 
 ## Why use this template
 
-- Includes two endpoints: `/prompt` and `/prompt/stream`
-- `/prompt/stream` streams back responses from OpenAI to FastAPI to your client
-- Deploy with one click
-- Includes Pytest - Modify tests in test_main.py and run tests with the command `pytest`
+- 📌 Includes two endpoints: `/prompt` and `/prompt/stream`
+- 📡 `/prompt/stream` streams back responses from OpenAI to FastAPI to your client
+- 🚀 Deploy with one click
+- ✅ Includes Pytest - Modify tests in test_main.py and run tests with the command `pytest`
 
 ## Run Project Locally
 
-1. Clone or Fork repository
-2. Create your `.env` file with `cp .env.example .env` and update your `OPENAI_API_KEY`
-3. Create virtualenv 
-4. Source virtualenv
-5. Install requirements
-6. Run local server `uvicorn main:app --host 0.0.0.0`
+Clone or fork repository
 
+```bash
+git clone https://github.com/waseemhnyc/fastapi-openai-render.git
+```
+
+Create a virutalenv and source the environment
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+Install the necessary libraries
+
+```bash
+pip install -r requirements.txt
+```
+
+Create a .env file and input your OpenAI API Key in the file
+
+```bash
+cp .env.example .env
+```
+
+Run local server
+```bash
+uvicorn main:app --host 0.0.0.0
+```
 
 ## Manual Steps
 
